@@ -1,0 +1,10 @@
+export { ReactComponent as ActivityIcon } from './activity.svg';
+export { ReactComponent as ActivityActiveIcon } from './activity-active.svg';
+export { ReactComponent as DirectMessageIcon } from './direct-message.svg';
+export { ReactComponent as DirectMessageActiveIcon } from './direct-message-active.svg';
+export { ReactComponent as ExploreIcon } from './explore.svg';
+export { ReactComponent as ExploreActiveIcon } from './explore-active.svg';
+export { ReactComponent as HomeIcon } from './home.svg';
+export { ReactComponent as HomeActiveIcon } from './home-active.svg';
+export { ReactComponent as UploadIcon } from './upload.svg';
+export { ReactComponent as UploadActiveIcon } from './upload-active.svg';
