@@ -13,7 +13,8 @@ class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      activeMenu: this.props.activeMenu
+      activeMenu: this.props.activeMenu,
+      profileImage: ProfileImage
     };
   }
 
@@ -43,9 +44,10 @@ class Navbar extends Component {
             <Link to="/accounts/activity" className="navbar-link" onClick={function(e) { e.preventDefault(); this.setState({ activeMenu: 'Activity' })}.bind(this)}>
               {this.state.activeMenu === 'Activity' ? <ActivityActiveIcon /> : <ActivityIcon />}
             </Link>
-            <Link to="#!" className="navbar-link" onClick={function(e) { e.preventDefault(); this.setState({ activeMenu: 'Profile' })}.bind(this)}>
-              <img className="profile-image" src={ProfileImage} alt="profile" />
-            </Link>
+            <span className="navbar-link" onClick={function(e) { e.preventDefault(); this.setState({ activeMenu: 'Profile' })}.bind(this)}>
+              { this.state.activeMenu === 'Profile' && <div className="profile-border"></div>}
+              <img className="profile-image" src={this.state.profileImage} alt="profile" />
+            </span>
           </div>
         </div>
       </nav>

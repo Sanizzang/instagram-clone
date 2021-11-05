@@ -1,15 +1,13 @@
 import { React, Component } from 'react';
-import TimelinePage from './TimelinePage';
-import LoginPage from './LoginPage';
+import { TimelinePage, LoginPage } from '.';
 
 class MainPage extends Component {
   render() {
-    let isLogged = true;
-    return (
-      <div>
-        {isLogged ? <TimelinePage /> : <LoginPage />}
-      </div>
-    );
+    if (localStorage.getItem('token') || 'DEBUG') {
+      return <TimelinePage />;
+    }
+
+    return <LoginPage />;
   }
 }
 
