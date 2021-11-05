@@ -1,6 +1,8 @@
 export { default as MainPage } from './MainPage';
 export { default as LoginPage } from './LoginPage';
-export { default as RegisterPage } from './RegisterPage';
+export { default as SignUpPage } from './SignUpPage';
+export { default as PasswordResetPage } from './PasswordResetPage';
+export { default as ProfileEditPage } from './ProfileEditPage';
 export { default as TimelinePage } from './TimelinePage';
 export { default as NotFoundPage } from './NotFoundPage';
 export { default as InboxPage } from './InboxPage';

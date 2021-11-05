@@ -51,8 +51,4 @@ class Navbar extends Component {
   }
 }
 
-Navbar.defaultProps = {
-  activeMenu: 'Home'
-}
-
 export default Navbar;

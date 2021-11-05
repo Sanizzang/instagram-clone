@@ -5,7 +5,7 @@ class TimelinePage extends Component {
   render() {
     return (
       <main>
-        <Navbar />
+        <Navbar activeMenu="Home" />
       </main>
     );
   }
