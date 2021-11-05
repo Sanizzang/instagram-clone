@@ -4,8 +4,8 @@ class RegisterPage extends Component {
   render() {
     return (
       <div>
-        <h1>Register Page</h1>
-        <p>This is the register page</p>
+        <h1>회원가입 페이지</h1>
+        <p>아직 미구현된 페이지입니다.</p>
       </div>
     );
   }

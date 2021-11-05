@@ -7,8 +7,8 @@ class InboxPage extends Component {
       <main>
         <Navbar activeMenu="Inbox" />
         <div>
-          <h1>Inbox Page</h1>
-          <p>This is the inbox page</p>
+          <h1>받은 메시지함</h1>
+          <p>아직 미구현된 페이지입니다.</p>
         </div>
       </main>
     );

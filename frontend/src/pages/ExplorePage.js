@@ -7,8 +7,8 @@ class ExplorePage extends Component {
       <main>
         <Navbar activeMenu="Explore" />
         <div>
-          <h1>Explore Page</h1>
-          <p>This is the explore page</p>
+          <h1>탐색 페이지</h1>
+          <p>아직 미구현된 페이지입니다.</p>
         </div>
       </main>
     );

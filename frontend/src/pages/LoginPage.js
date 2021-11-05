@@ -4,8 +4,8 @@ class LoginPage extends Component {
   render() {
     return (
       <div>
-        <h1>Login Page</h1>
-        <p>This is the login page</p>
+        <h1>로그인 페이지</h1>
+        <p>아직 미구현된 페이지입니다.</p>
       </div>
     );
   }
