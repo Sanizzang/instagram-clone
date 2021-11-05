@@ -1,21 +1,41 @@
-// Navigation bar icons
-export { ReactComponent as ActivityIcon } from './activity.svg';
-export { ReactComponent as ActivityActiveIcon } from './activity-active.svg';
-export { ReactComponent as DirectMessageIcon } from './direct.svg';
-export { ReactComponent as DirectMessageActiveIcon } from './direct-active.svg';
-export { ReactComponent as ExploreIcon } from './explore.svg';
-export { ReactComponent as ExploreActiveIcon } from './explore-active.svg';
-export { ReactComponent as HomeIcon } from './home.svg';
-export { ReactComponent as HomeActiveIcon } from './home-active.svg';
-export { ReactComponent as UploadIcon } from './upload.svg';
-export { ReactComponent as UploadActiveIcon } from './upload-active.svg';
+import { ReactComponent as ActivityIcon } from './activity.svg';
+import { ReactComponent as ActivityActiveIcon } from './activity-active.svg';
+import { ReactComponent as DirectMessageIcon } from './direct.svg';
+import { ReactComponent as DirectMessageActiveIcon } from './direct-active.svg';
+import { ReactComponent as ExploreIcon } from './explore.svg';
+import { ReactComponent as ExploreActiveIcon } from './explore-active.svg';
+import { ReactComponent as HomeIcon } from './home.svg';
+import { ReactComponent as HomeActiveIcon } from './home-active.svg';
+import { ReactComponent as UploadIcon } from './upload.svg';
+import { ReactComponent as UploadActiveIcon } from './upload-active.svg';
+import { ReactComponent as ProfileIcon } from './profile.svg';
+import { ReactComponent as BookmarkIcon } from './bookmark.svg';
+import { ReactComponent as SettingIcon } from './setting.svg';
+import { ReactComponent as SwitchIcon } from './switch.svg';
+import { ReactComponent as ExitIcon } from './exit.svg';
+import { ReactComponent as MediaIcon } from './media.svg';
 
-// Profile menu icons
-export { ReactComponent as ProfileIcons } from './profile.svg';
-export { ReactComponent as BookmarkIcons } from './bookmark.svg';
-export { ReactComponent as SettingIcons } from './setting.svg';
-export { ReactComponent as SwitchIcons } from './switch.svg';
+export const NavigationBarIcons = {
+  ActivityIcon,
+  ActivityActiveIcon,
+  DirectMessageIcon,
+  DirectMessageActiveIcon,
+  ExploreIcon,
+  ExploreActiveIcon,
+  HomeIcon,
+  HomeActiveIcon,
+  UploadIcon,
+  UploadActiveIcon
+};
 
-// Post upload icons
-export { ReactComponent as ExitIcons } from './exit.svg';
-export { ReactComponent as MediaIcons } from './media.svg';
+export const ProfileMenuIcons = {
+  ProfileIcon,
+  BookmarkIcon,
+  SettingIcon,
+  SwitchIcon
+};
+
+export const PostUploadIcons = {
+  ExitIcon,
+  MediaIcon
+};
