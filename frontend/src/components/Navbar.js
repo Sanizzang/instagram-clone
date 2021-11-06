@@ -1,6 +1,7 @@
 import { React, Component } from 'react';
-import { NavigationBarIcons } from '../assets/icons';
 import { Link } from 'react-router-dom';
+import { NavigationBarIcons } from '../assets/icons';
+import { ProfileMenuTemplete } from '.';
 import Logo from '../assets/images/logo.png';
 import ProfileImage from '../assets/images/profile.jpg';
 import './Navbar.css';
@@ -10,7 +11,8 @@ class Navbar extends Component {
     super(props);
     this.state = {
       activeMenu: this.props.activeMenu,
-      profileImage: ProfileImage
+      profileImage: ProfileImage,
+      isProfileMenuOpen: false
     };
   }
 
@@ -40,9 +42,10 @@ class Navbar extends Component {
             <Link to="/accounts/activity" className="navbar-link" onClick={function(e) { e.preventDefault(); this.setState({ activeMenu: 'Activity' })}.bind(this)}>
               {this.state.activeMenu === 'Activity' ? <NavigationBarIcons.ActivityActiveIcon /> : <NavigationBarIcons.ActivityIcon />}
             </Link>
-            <span className="navbar-link" onClick={function(e) { e.preventDefault(); this.setState({ activeMenu: 'Profile' })}.bind(this)}>
-              { this.state.activeMenu === 'Profile' && <div className="profile-border"></div>}
+            <span className="navbar-link" onClick={function(e) { e.preventDefault(); this.setState(prevState => ({ activeMenu: 'Profile', isProfileMenuOpen: !prevState.isProfileMenuOpen }))}.bind(this)}>
+              { this.state.isProfileMenuOpen && <div className="profile-border"></div>}
               <img className="profile-image" src={this.state.profileImage} alt="profile" />
+              { this.state.isProfileMenuOpen && <ProfileMenuTemplete /> }
             </span>
           </div>
         </div>

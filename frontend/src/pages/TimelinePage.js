@@ -1,12 +1,11 @@
 import { React, Component } from 'react';
-import Navbar from '../components/Navbar';
+import { LayoutWithNavbar } from '../components'
 
 class TimelinePage extends Component {
   render() {
     return (
-      <main>
-        <Navbar activeMenu="Home" />
-      </main>
+      <LayoutWithNavbar activeMenu="Home">
+      </LayoutWithNavbar>
     );
   }
 }

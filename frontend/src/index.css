@@ -2,7 +2,10 @@ body {
   margin: 0;
 }
 
-main {
-  height: 100vh;
+.app {
   background-color: #fafafa;
+}
+
+main {
+  min-height: 100vh;
 }
