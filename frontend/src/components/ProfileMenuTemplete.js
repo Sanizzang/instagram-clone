@@ -5,8 +5,8 @@ import { ProfileMenuIcons } from '../assets/icons';
 class ProfileMenuTemplete extends Component {
   render() {
     return (
-      <div style={{ marginLeft: "-180px", top: "15px" }}>
-        <div style={{ left: "0", top: "0", right: "0", bottom: "0", position: "fixed" }}></div>
+      <div>
+        <div style={{ inset: "0", position: "fixed" }}></div>
         <div>
           <div></div>
           <div className="profile-menu-items">

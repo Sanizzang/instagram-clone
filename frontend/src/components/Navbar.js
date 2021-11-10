@@ -45,7 +45,9 @@ class Navbar extends Component {
             <span className="navbar-link" onClick={function(e) { e.preventDefault(); this.setState(prevState => ({ activeMenu: 'Profile', isProfileMenuOpen: !prevState.isProfileMenuOpen }))}.bind(this)}>
               { this.state.isProfileMenuOpen && <div className="profile-border"></div>}
               <img className="profile-image" src={this.state.profileImage} alt="profile" />
-              { this.state.isProfileMenuOpen && <ProfileMenuTemplete /> }
+              <div style={{ marginLeft: "62px", top: "15px" }}>
+                { this.state.isProfileMenuOpen && <ProfileMenuTemplete /> }
+              </div>
             </span>
           </div>
         </div>
