@@ -30,3 +30,7 @@ div, main, nav, section, article {
   box-sizing: border-box;
   align-items: stretch;
 }
+
+a, a:visited {
+  text-decoration: none;
+}
