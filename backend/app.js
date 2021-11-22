@@ -1,4 +1,4 @@
-import express, { application } from 'express';
+import express from 'express';
 import 'express-async-errors';
 import cors from 'cors';
 import morgan from 'morgan';
@@ -32,4 +32,4 @@ app.use((error, req, res, next) => {
     res.sendStatus(500);
 });
 
-app.listen(config.host.port);
+app.listen(config.port);

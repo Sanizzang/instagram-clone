@@ -25,7 +25,6 @@ const validateSignup = [
     body('username').trim().notEmpty().withMessage('username is missing'),
     body('name').trim().notEmpty().withMessage('name is missing'),
     body('phoneNumber').trim().notEmpty().withMessage('phoneNumber is missing'),
-    body('website_url').trim().isURL().optional({nullable:true}),
     validate,
 ];
 
@@ -39,7 +38,7 @@ router.post('/login', validateCredential, authController.login);
 router.get('/me', isAuth, authController.me);
 
 // POST/auth/newpassword
-router.post('/newpassword', isAuth, body('password').trim().isLength({ min: 5 }).withMessage('password should be at least 5 characters'), authController.newpassword);
+router.post('/newpassword', isAuth, body('newpassword').trim().isLength({ min: 5 }).withMessage('password should be at least 5 characters'), authController.newpassword);
 
 // PUT/auth/setprofile
 router.put('/setprofile', isAuth, validateSignup, authController.setprofile);

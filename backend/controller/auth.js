@@ -6,7 +6,7 @@ import { config } from '../config.js';
 
 // POST/auth/signup
 export async function signup(req, res){
-    const { email, password, username, name } = req.body;
+    const { email, password, username, name, phoneNumber } = req.body;
     const found = await userRepository.findByEmail(email);
     if(found){
         return res.status(409).json({ message: `${username} already exists` });
@@ -17,9 +17,10 @@ export async function signup(req, res){
         password: hashed,
         username,
         name,
+        phoneNumber
     });
     const token = createJWTToken(userId);
-    res.status(201).json({ token, username });
+    res.status(201).json({ token, email });
 }
 
 // POST/auth/login
@@ -34,7 +35,7 @@ export async function login(req, res) {
         return res.status(401).json({ message: 'Invalid user or password '});
     }
     const token = createJWTToken(user.id);
-    res.status(200).json({ token, uername });
+    res.status(200).json({ token, email });
 }
 
 // GET/auth/me
@@ -57,12 +58,13 @@ export async function newpassword(req, res, next){
     const hashed = await bcrypt.hash(newpassword, config.bcrypt.saltRounds);
     const userId = await userRepository.revisePassword(req.userId, hashed);
     const token = createJWTToken(userId);
-    res.status(201).json({ token, username });
+    res.status(201).json({ token });
 }
 
 // PUT/auth/setprofile
 export async function setprofile(req, res, next){
     await userRepository.reviseProfile(req.userId, req.body);
+    res.sendStatus(201);
 }
 
 function createJWTToken(id){

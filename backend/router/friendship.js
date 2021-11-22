@@ -16,3 +16,5 @@ router.post('/follow/:userId', friendshipController.follow);
 
 // DELETE /friendship/unfollow/:userId
 router.delete('/unfollow/:userId', friendshipController.unfollow);
+
+export default router;

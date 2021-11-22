@@ -13,16 +13,16 @@ export async function findById(id){
 }
 
 export async function createUser(user){
-    const { email, password, username, name } = user;
+    const { email, password, username, name, phoneNumber} = user;
     return db
         .execute(
-            'INSERT INTO user (email, password, username, name) VALUES(?, ?, ?, ?)',
-            [email, password, username, name]
+            'INSERT INTO user (email, password, username, name, phoneNumber) VALUES(?, ?, ?, ?, ?)',
+            [email, password, username, name, phoneNumber]
         )
         .then((result) => result[0].insertId);
 }
 
-export async function revisePassword(userId, hashed){
+export async function revisePassword(userId, newpassword){
     return db.execute(
         'UPDATE user SET password=? WHERE id=?', [newpassword, userId]
     )
@@ -32,8 +32,8 @@ export async function revisePassword(userId, hashed){
 export async function reviseProfile(userId, value){
     const { name, username, website_url, biography, email, phoneNumber, gender } = value;
     db
-    .execute('UPDATE user SET name=?, username=?, biography=?, email=?, phoneNumber=?, gender=? WHERE id=?',
+    .execute('UPDATE user SET name=?, website_url=?, username=?, biography=?, email=?, phoneNumber=?, gender=? WHERE id=?',
              [name, username, website_url, biography, email, phoneNumber, gender, userId]
     )
-    .then(result);
+    .then(result => result[0][0]);
 }
